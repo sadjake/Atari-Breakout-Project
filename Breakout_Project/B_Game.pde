@@ -51,11 +51,11 @@ void game () {
   if (paddlex < paddled/2) {
     paddlex = paddled/2;
   }
-  if (paddlex > 875) {
-    paddlex = 875;
+  if (paddlex > 900) {
+    paddlex = 900;
   }
-  if (paddlex > 875) {
-    paddlex = 875;
+  if (paddlex > 900) {
+    paddlex = 900;
   }
 
   // POINTS SCORED
@@ -68,7 +68,7 @@ void game () {
     lives = lives - 1;
   }
 
-  if (lives <= 0) {
+  if (lives <= 0 || score == 10) {
     mode = GAMEOVER;
   }
 
