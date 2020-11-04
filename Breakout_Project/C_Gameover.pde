@@ -1,36 +1,19 @@
 void gameover() {
   if (lives == 0) {
-    fill(0);
-    text("gameover", 500, 500);
-    stroke(255);
+    background(0);
     fill(255);
-    rect(200, 40, 300, 150);
-    textSize(50);
-    fill(0);
-    text("lives: 0", 210, 100);
     textSize(25);
-    text("nice try. you didn't make it through adulthood. goodnight punpun.", CENTER, CENTER);
-    text("*click to restart*", CENTER, 600);
-  }
-  if (score == 10); {
-    if (lives == 0) {
-      fill(0);
-      text("gameover", 500, 500);
-      stroke(255);
-      fill(255);
-      rect(200, 40, 300, 150);
-      textSize(50);
-      fill(0);
-      text("lives: 0", 210, 100);
-      textSize(25);
-      text("good job. you made it through adulthood. good morning punpun.", CENTER, CENTER);
-      text("*click to restart*", CENTER, 600);
-    }
+    text("you failed.", 50, 100);
+    text("why did you even try?", 50, 300);
+    text("just give up. what's the point of living anymore?", 50, 450);
+    text("goodnight, punpun.", 50, 600);
+  } else {
   }
 }
 
 void gameoverClicks() {
   if (mouseX > 0 && mouseX < 1000 && mouseY > 0 && mouseY < 1000)
-    mode = GAME;
+    mode = INTRO;
   lives = 5;
+  score = 0;
 }

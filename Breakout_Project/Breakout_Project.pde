@@ -13,10 +13,18 @@ final int PAUSE = 3;
 final int GAMEOVER = 4;
 final int INSTRUCTIONS = 5;
 
+//brick variables
+int [] x;
+int [] y;
+int brickd;
+
 //gif 
 PImage[] gif;
 int numPages;
 int f;
+
+//image 
+PImage aiko;
 
 //font
 PFont goodnight;
@@ -32,9 +40,26 @@ float vx, vy;
 float a;
 
 void setup () {
+  brickd = 50;
+  x = new int [4];
+  y = new int [4];
+
+  x[0] = 200;
+  y[0] = 100;
+
+  x[1] = 400;
+  y[1] = 100;
+
+  x[2] = 600;
+  y[2] = 100;
+
+  x[3] = 800;
+  y[3] = 100;
+
   size(1000, 700);
   background(255);
   goodnight = createFont("goodnight.ttf", 200);
+  aiko = loadImage("aiko.png");
   mode = INTRO;
 
   numPages = 20;
@@ -57,10 +82,10 @@ void setup () {
   //initialize ball
   ballx = width/2;
   bally = height/2+100;
-  balld = 25;
+  balld = 20;
 
   vx = random(-3, 3);
-  vy = random(-3, 3);
+  vy = random(1, 3);
   a = radians(45);
 }
 

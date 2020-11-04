@@ -2,13 +2,6 @@ void game () {
   //background
   background(255);
 
-  //scoreboard
-  textSize(50);
-  fill(0);
-  text("lives:" + lives, 210, 100);
-  fill(0);
-  timer = timer - 1;
-
   //draw paddle
   circle(paddlex, paddley, paddled);
 
@@ -24,11 +17,12 @@ void game () {
   circle(ballx, bally, balld);
 
   // PAUSE BUTTON
-    stroke(0);
-    fill(255);
-    circle(100, 100, 100);
-    fill(0);
-    text("||", 86, 119);
+  stroke(0);
+  fill(255);
+  circle(0, 0, 100);
+  fill(0);
+  textSize(75);
+  text("II", 80, 119);
 
   //move ball
   if (timer < 0) {
@@ -58,7 +52,7 @@ void game () {
     paddlex = 900;
   }
 
-  // POINTS SCORED
+  // LIVES LOST
   if (bally > width+balld) {
     ballx = width/2;
     bally = height/2+100;
@@ -76,6 +70,21 @@ void game () {
   if (dist(paddlex, paddley, ballx, bally) < paddled/2 + balld/2) {
     vx = (ballx-paddlex)/20;
     vy = (bally-paddley)/20;
+  }
+
+  //scoreboard
+  textSize(50);
+  fill(0);
+  text("lives:" + lives, 50, 650);
+  text("score:" + score, 770, 650);
+  timer = timer - 1;
+
+
+  //bricks
+  int i = 0;
+  while (i < 4) {
+    circle(x[i], y[i], brickd);
+    i=i+1;
   }
 }
 
