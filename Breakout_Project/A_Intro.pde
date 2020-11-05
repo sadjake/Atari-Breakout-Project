@@ -1,4 +1,7 @@
 void intro() {
+  //music 
+  intro.play(); 
+ 
   //design
   image(gif[f], 0, 0, width, height);
   if (frameCount % 4 == 0) f++;

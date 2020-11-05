@@ -5,6 +5,7 @@ void instructions () {
   //instructions text
   fill(0);
   textSize(25);
+  text("click to continue", 700, 80);
   text("good morning punpun.", 110, 80);
   text("make sure you work hard today as well. ok? ok? ok.", 60, 180);
   text("complete your responsibilites.", 100, 250);
