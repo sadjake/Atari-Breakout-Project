@@ -40,6 +40,7 @@ int f;
 //image 
 PImage aiko;
 PImage pain;
+PImage punpunpic;
 
 //font
 PFont goodnight;
@@ -81,6 +82,7 @@ void setup () {
   goodnight = createFont("goodnight.ttf", 200);
   aiko = loadImage("aiko.png");
   pain = loadImage("pain.jpg");
+  punpunpic = loadImage("punpunpic.jpg");
   mode = INTRO;
 
   numPages = 20;

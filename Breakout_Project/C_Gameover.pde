@@ -3,7 +3,7 @@ void gameover() {
     gameStart.pause();
     endgame.play();
     background(0);
-    image(pain, 0, 0, 700, 1000);
+    image(pain, 0, 0, 1000, 700);
     fill(255);
     textSize(25);
     text("click to restart", 500, 100);
@@ -12,13 +12,18 @@ void gameover() {
     text("just give up. living is harder than dying right?", 50, 450);
     text("goodnight, punpun.", 50, 600);
   } else if (score == 16) {
+    gameStart.pause();
+    endgame.play();
     background(0);
+    image(punpunpic, 0, 0, 1200, 700);
     fill(255);
-    textSize(25);
+    textFont(goodnight);
+    textSize(40);
     text("click to restart", 500, 100);
-    text("you did it", 50, 100);
+    text("you did it.", 50, 100);
     text("you can carry on with life now.", 50, 300);
     text("but still, living is harder than dying right?", 50, 450);
+    fill(255,0,0);
     text("goodnight, punpun.", 50, 600);
   }
 }
@@ -26,8 +31,10 @@ void gameover() {
 void gameoverClicks() {
   if (mouseX > 0 && mouseX < 1000 && mouseY > 0 && mouseY < 1000)
     mode = INTRO;
-    endgame.pause();
-    intro.rewind();
+  gameStart.pause();
+  gameStart.rewind();
+  endgame.pause();
+  intro.rewind();
   lives = 5;
   score = 0;
   int i = 0;
