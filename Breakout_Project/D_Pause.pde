@@ -4,7 +4,6 @@ void pause () {
   text("paused", 300, 100);
   text("why did you pause?", 300,200);
   text("are you stressed?", 300, 300);
-  text("quit wasting time. resume already.", 300, 500); 
 }
 
 void pauseClicks () {
