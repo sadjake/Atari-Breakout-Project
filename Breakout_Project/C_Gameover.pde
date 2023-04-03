@@ -8,8 +8,6 @@ void gameover() {
     textSize(25);
     text("click to restart", 500, 100);
     text("you failed.", 50, 100);
-    text("why did you even try?", 50, 300);
-    text("just give up. living is harder than dying right?", 50, 450);
     text("goodnight, punpun.", 50, 600);
   } else if (score == 16) {
     gameStart.pause();
@@ -21,8 +19,6 @@ void gameover() {
     textSize(40);
     text("click to restart", 500, 100);
     text("you did it.", 50, 100);
-    text("you can carry on with life now.", 50, 300);
-    text("but still, living is harder than dying right?", 50, 450);
     fill(255,0,0);
     text("goodnight, punpun.", 50, 600);
   }
