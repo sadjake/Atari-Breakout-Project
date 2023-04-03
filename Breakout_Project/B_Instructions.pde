@@ -10,7 +10,7 @@ void instructions () {
   text("make sure you work hard today as well. ok? ok? ok.", 60, 180);
   text("complete your responsibilites.", 100, 250);
   text("use the paddle (left and right key or a and d key) to break all the bricks.", 25, 330);
-  text("if you score 10 points, you'll succeed in society.",25,400);
+  text("if you score 10 points, you win",25,400);
   text("if your lives reach 0,", 25,470);
   fill(255,0,0);
   textSize(30);
