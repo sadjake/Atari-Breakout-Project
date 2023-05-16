@@ -7,7 +7,6 @@ void gameover() {
     fill(255);
     textSize(25);
     text("click to restart", 500, 100);
-    text("you failed.", 50, 100);
     text("goodnight, punpun.", 50, 600);
   } else if (score == 16) {
     gameStart.pause();
