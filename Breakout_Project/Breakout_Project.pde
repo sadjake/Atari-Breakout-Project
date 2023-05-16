@@ -1,6 +1,5 @@
 // Breakout Project
 // Jake Choi
-// Block 1-2B
 // October 26, 2020
 
 import ddf.minim.*;
